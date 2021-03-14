@@ -6,7 +6,7 @@
 
     <groupId>com.osalliance.keycloak</groupId>
     <artifactId>emailValidator</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -15,6 +15,7 @@
         <wildfly.version>21.0.1.Final</wildfly.version>
         <keycloak.version>12.0.2</keycloak.version>
         <log4j.version>1.2.17</log4j.version>
+        <powermock.version>2.0.9</powermock.version>
 
     </properties>
 
@@ -38,8 +39,8 @@
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>3.3.3</version>
+            <artifactId>mockito-inline</artifactId>
+            <version>3.8.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -58,7 +59,12 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.7.22.jbossorg-1</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
