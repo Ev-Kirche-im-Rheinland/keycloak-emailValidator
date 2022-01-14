@@ -12,5 +12,5 @@ services:
     - 8080:8080
     - 5005:8787
     volumes:
-    - ./target/libs/emailValidator-1.1:/opt/jboss/keycloak/standalone/deployments/emailValidator-1.1
+    - ./target/libs/emailValidator-1.1.jar:/opt/jboss/keycloak/standalone/deployments/emailValidator-1.1.jar
 
