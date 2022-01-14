@@ -2,6 +2,9 @@
 
 blocks emails from registration that matches specific regex
 
+# build
+1. run mvn package
+
 # Install
 
 1. copy the jar file to /opt/jboss/keycloak/standalone/deployments/
