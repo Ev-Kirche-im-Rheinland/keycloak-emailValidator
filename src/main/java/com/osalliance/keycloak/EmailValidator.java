@@ -10,10 +10,7 @@ import org.keycloak.models.RealmModel;
 import org.keycloak.models.UserModel;
 import org.keycloak.models.utils.FormMessage;
 import org.keycloak.services.messages.Messages;
-import org.keycloak.services.resources.AttributeFormDataProcessor;
 import org.keycloak.services.validation.Validation;
-import org.keycloak.userprofile.UserProfile;
-
 import javax.ws.rs.core.MultivaluedMap;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,9 +22,8 @@ public class EmailValidator implements FormAction {
 
     public void validate(ValidationContext context) {
         MultivaluedMap<String, String> formData = context.getHttpRequest().getDecodedFormParameters();
-        UserProfile updatedProfile = AttributeFormDataProcessor.toUserProfile(formData);
 
-        String email = updatedProfile.getAttributes().getFirstAttribute(UserModel.EMAIL);
+        String email = formData.getFirst(UserModel.EMAIL);
 
         context.getEvent().detail(Details.REGISTER_METHOD, "form");
 
