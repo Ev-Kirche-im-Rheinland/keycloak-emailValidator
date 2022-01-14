@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  keycloak:
+    image: jboss/keycloak:16.1.0
+    environment:
+      KEYCLOAK_USER: "admin"
+      KEYCLOAK_PASSWORD: "1234"
+      DEBUG: "true"
+      DEBUG_PORT: "*:8787"
+    ports:
+    - 8080:8080
+    - 5005:8787
+    volumes:
+    - ./target/libs/emailValidator-1.1:/opt/jboss/keycloak/standalone/deployments/emailValidator-1.1
+
