@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   keycloak:
-    image: quay.io/keycloak/keycloak:16.1.1
+    image: jboss/keycloak:18.0.2
     environment:
       KEYCLOAK_USER: "admin"
       KEYCLOAK_PASSWORD: "1234"
@@ -12,5 +12,5 @@ services:
     - 8080:8080
     - 5005:8787
     volumes:
-    - ./target/libs/emailValidator-1.1.jar:/opt/jboss/keycloak/standalone/deployments/emailValidator-1.1.jar
+    - ./target/libs/emailValidator-1.2.jar:/opt/jboss/keycloak/standalone/deployments/emailValidator-1.2.jar
 
