@@ -6,17 +6,16 @@
 
     <groupId>com.osalliance.keycloak</groupId>
     <artifactId>emailValidator</artifactId>
-    <version>1.1</version>
+    <version>${keycloak.version}</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compile.source>11</maven.compile.source>
         <maven.compile.target>11</maven.compile.target>
-        <wildfly.version>21.0.1.Final</wildfly.version>
-        <keycloak.version>16.1.0</keycloak.version>
+        <keycloak.version>23.0.1</keycloak.version>
         <log4j.version>1.2.17</log4j.version>
         <powermock.version>2.0.9</powermock.version>
-
+	<junit.version>4.13.2</junit.version>
     </properties>
 
     <dependencies>
@@ -50,14 +49,15 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.32</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+	    <version>${junit.version}</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -65,9 +65,10 @@
             <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
-    <dependencyManagement>
+<!--    <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.wildfly.bom</groupId>
@@ -77,7 +78,7 @@
                 <version>${wildfly.version}</version>
             </dependency>
         </dependencies>
-    </dependencyManagement>
+    </dependencyManagement> -->
 
 
     <repositories>

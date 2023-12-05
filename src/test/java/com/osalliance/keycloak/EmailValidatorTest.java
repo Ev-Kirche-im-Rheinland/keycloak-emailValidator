@@ -2,7 +2,7 @@ package com.osalliance.keycloak;
 
 import static org.mockito.Mockito.*;
 
-import org.jboss.resteasy.spi.HttpRequest;
+import org.keycloak.http.HttpRequest;
 import org.junit.Test;
 import org.keycloak.authentication.ValidationContext;
 import org.keycloak.events.Details;
@@ -11,7 +11,7 @@ import org.keycloak.models.*;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 
-import javax.ws.rs.core.MultivaluedMap;
+import jakarta.ws.rs.core.MultivaluedMap;
 import java.util.*;
 
 public class EmailValidatorTest {
